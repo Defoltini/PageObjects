@@ -2,7 +2,12 @@ plugins {
     id 'java-library'
     id "io.qameta.allure" version "2.11.2"
 }
-
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
 repositories {
     mavenCentral()
 }
