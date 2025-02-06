@@ -1,12 +1,13 @@
 import TestData.TestData;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-
+@Tag("smoke")
 public class DemoqaTestsWithRandomData extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
-
 
     @Test
     void successfulSearchTest() {
@@ -38,7 +39,6 @@ public class DemoqaTestsWithRandomData extends TestBase {
 
 
     }
-
     @Test
     void minimalSuccessfulSearchTest() {
         registrationPage.openPage()
@@ -52,7 +52,6 @@ public class DemoqaTestsWithRandomData extends TestBase {
                 .checkResult("Mobile", testData.userPhone);
 
     }
-
     @Test
     void testRegistrationWithInvalidInput() {
         registrationPage.openPage()
