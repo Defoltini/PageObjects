@@ -12,10 +12,12 @@ public class TestBase {
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
 //        Configuration.holdBrowserOpen = true;
-  //      Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
             }
             @AfterEach
     void addAttachments(){
                 Attach.screenshotAs("Screenshot after test case");
+                Attach.attachAsText();
+                Attach.browserConsoleLogs();
             }
 }
