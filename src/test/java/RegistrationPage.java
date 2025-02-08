@@ -64,6 +64,7 @@ public class RegistrationPage {
         return this;
     };
     public RegistrationPage userSelectPicture(String value){
+        selectPicture.scrollTo();
         selectPicture.uploadFromClasspath(value);
         return this;
     };
