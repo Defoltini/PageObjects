@@ -72,6 +72,7 @@ public class RegistrationPage {
         return this;
     };
     public RegistrationPage selectUserState(String value){
+        userState.scrollTo();
         userState.click();
         userState.$(byText(value)).click();
         return this;
