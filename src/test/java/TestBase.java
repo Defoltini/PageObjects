@@ -17,7 +17,6 @@ public class TestBase {
             @AfterEach
     void addAttachments(){
                 Attach.screenshotAs("Screenshot after test case");
-                Attach.attachAsText();
                 Attach.browserConsoleLogs();
             }
 }
