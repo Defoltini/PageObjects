@@ -18,5 +18,6 @@ public class TestBase {
     void addAttachments(){
                 Attach.screenshotAs("Screenshot after test case");
                 Attach.browserConsoleLogs();
+                Attach.addVideo();
             }
 }
