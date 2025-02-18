@@ -12,12 +12,13 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
-        //Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = System.getProperty("windowSize", "1920x1080");;
         Configuration.baseUrl = "https://demoqa.com";
-        //Configuration.browser = "chrome";
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("version", "122");
         Configuration.timeout = 10000;
         //Configuration.holdBrowserOpen = true;
-        Configuration.remote = "https://user1:1234@"+selenoidHost+"wd/hub";
+        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoidHost")+"wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
