@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "PageObjects",
+    "environment": "some env",
+    "comment": "comment here @defoltini",
+    "reportLink": "https://jenkins.autotests.cloud/job/032-defoltini-jenkins11/39",
+    "language": "ru",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "7960051236:AAHRIBhWpmOdgyaojXv1fV06RcekKxqdjxc",
+    "chat": "-1002456759728",
+    "replyTo": ""
+  }
+}
