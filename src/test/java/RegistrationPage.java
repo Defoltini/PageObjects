@@ -82,6 +82,7 @@ public class RegistrationPage {
     ;
 
     public RegistrationPage userSelectPicture(String value) {
+        selectPicture.scrollTo();
         selectPicture.uploadFromClasspath(value);
         return this;
     }
@@ -122,6 +123,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage submitButton() {
+        submitBtn.scrollTo();
         submitBtn.click();
         return this;
     }
